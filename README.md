@@ -1,5 +1,11 @@
 # Drum machine
 
+
+<img src="drumMachine.gif"/>
+
+
+
+
 In this project, you'll be creating a drum machine that runs in the browser! 
 
 Check out the starting point for this project here: https://ci-wdi-900.github.io/drum-machine/

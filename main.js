@@ -1,11 +1,9 @@
-// Setup 'tick' sound
-
-
 const h1 = document.querySelector('h1');
 const metronome = document.querySelector('#metronome');
 const kickCheckBox = document.querySelector('#kick');
 const snareCheckBox = document.querySelector('#snare');
 const highHatCheckBox = document.querySelector('#highHat');
+
 
 const sax1CheckBox = document.querySelector('#sax1');
 const sax2CheckBox = document.querySelector('#sax2');
@@ -13,6 +11,7 @@ const sax3CheckBox = document.querySelector('#sax3');
 const flute1CheckBox = document.querySelector('#flute1');
 const flute2CheckBox = document.querySelector('#flute2');
 const turkishDrumCheckBox = document.querySelector('#turkishDrum');
+
 
 const tick = new Audio('sounds/tick.mp3');
 const tock = new Audio('sounds/tock.mp3');
@@ -30,6 +29,7 @@ const turkishDrumSound = new Audio('sounds/turkishDrum.mp3');
 const kickInput = document.querySelector('#kick-drum-timing');
 const snareInput = document.querySelector('#snare-drum-timing');
 const highHatInput = document.querySelector('#high-hat-timing');
+
 
 const sax1Input = document.querySelector('#sax1-timing');
 const sax2Input = document.querySelector('#sax2-timing');
@@ -61,14 +61,19 @@ function update() {
 
     let sax1StringArray = sax1Input.value.split(',');
     let sax1NumArray = sax1StringArray.map(Number);
+
     let sax2StringArray = sax2Input.value.split(',');
     let sax2NumArray = sax2StringArray.map(Number);
+
     let sax3StringArray = sax3Input.value.split(',');
     let sax3NumArray = sax3StringArray.map(Number);
+
     let flute1StringArray = flute1Input.value.split(',');
     let flute1NumArray = flute1StringArray.map(Number);
+
     let flute2StringArray = flute2Input.value.split(',');
     let flute2NumArray = flute2StringArray.map(Number);
+
     let turkishDrumStringArray = turkishDrumInput.value.split(',');
     let turkishDrumNumArray = turkishDrumStringArray.map(Number);
    
@@ -92,6 +97,8 @@ function update() {
         tock.load();
         tock.play();
     }
+
+
     if (kickCheckBox.checked && kickNumArray.includes(count)){
         kickSound.load();
         kickSound.play();
@@ -100,7 +107,6 @@ function update() {
         snareSound.load();
         snareSound.play();
     }
-
     if (highHatCheckBox.checked && highHatNumArray.includes(count)){
         highHatSound.load();
         highHatSound.play();
@@ -130,18 +136,6 @@ function update() {
         turkishDrumSound.play();
     }
 };
-
-
-
-
-
-
-
-
-
-
-
-
 
 // This function sets up update() to be called every 600ms
 function setupUpdate() {
